@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Official personal portfolio of Pastah Demih, a Ugandan songwriter, music composer, content creator, and developing electrician.">
+  <meta name="author" content="Pastah Demih">
+  <meta name="theme-color" content="#17112f">
+  <title>Pastah Demih | Music, Creativity & Electrical Work</title>
+  <style>
+    :root {
+      --ink: #f8f7ff;
+      --muted: #c7c3df;
+      --bg: #100d22;
+      --panel: rgba(255,255,255,.075);
+      --pink: #ff5da2;
+      --orange: #ffb347;
+      --blue: #67d5ff;
+      --purple: #a78bfa;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 8%, rgba(255,93,162,.20), transparent 28rem),
+        radial-gradient(circle at 90% 24%, rgba(103,213,255,.16), transparent 27rem),
+        var(--bg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1100px, 91%); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 5;
+      background: rgba(16,13,34,.82); backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,.09);
+    }
+    nav { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding: 15px 0; }
+    .brand { font-weight: 900; letter-spacing: .04em; text-decoration: none; }
+    .brand span { color: var(--pink); }
+    .navlinks { display: flex; flex-wrap: wrap; gap: 17px; }
+    .navlinks a { font-size: .92rem; color: var(--muted); text-decoration: none; }
+    .navlinks a:hover { color: white; }
+    .hero { min-height: 78vh; display: grid; grid-template-columns: 1.3fr .7fr; align-items: center; gap: 40px; padding: 76px 0 64px; }
+    .eyebrow { color: var(--blue); font-weight: 800; text-transform: uppercase; letter-spacing: .16em; font-size: .78rem; }
+    h1 { font-size: clamp(3rem, 8vw, 6.6rem); line-height: .98; letter-spacing: -.06em; margin: 15px 0 20px; }
+    .gradient { background: linear-gradient(100deg, var(--pink), var(--orange), var(--blue)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .lead { color: var(--muted); font-size: clamp(1.05rem, 2vw, 1.25rem); max-width: 650px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn { display: inline-block; padding: 12px 18px; border-radius: 999px; font-weight: 800; text-decoration: none; border: 1px solid rgba(255,255,255,.22); }
+    .primary { background: linear-gradient(100deg, var(--pink), #a78bfa); border: 0; color: #160e29; }
+    .portrait {
+      min-height: 350px; aspect-ratio: 4 / 5; border-radius: 30px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: linear-gradient(145deg, rgba(255,93,162,.25), rgba(103,213,255,.16)), var(--panel);
+      display: grid; place-items: center; text-align: center; padding: 25px;
+      box-shadow: 0 25px 90px rgba(0,0,0,.24); overflow: hidden;
+    }
+    .portrait .camera { font-size: 3.2rem; }
+    .portrait p { color: var(--muted); max-width: 240px; margin: 10px auto 0; }
+    section { padding: 65px 0; }
+    .section-head { margin-bottom: 28px; }
+    h2 { font-size: clamp(2rem, 5vw, 3.2rem); letter-spacing: -.04em; line-height: 1.1; margin: 8px 0 12px; }
+    .section-head p, .card p { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { background: var(--panel); border: 1px solid rgba(255,255,255,.10); padding: 24px; border-radius: 22px; }
+    .icon { font-size: 2rem; }
+    h3 { margin: 10px 0 8px; font-size: 1.25rem; }
+    .about { display: grid; grid-template-columns: .8fr 1.2fr; gap: 28px; align-items: start; }
+    .highlight { border-radius: 24px; padding: 26px; background: linear-gradient(135deg, rgba(255,93,162,.17), rgba(103,213,255,.12)); border: 1px solid rgba(255,255,255,.12); }
+    .tags { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .tag { padding: 7px 12px; border-radius: 999px; background: rgba(255,255,255,.09); color: #ece9ff; font-size: .9rem; }
+    .contact-box { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; padding: 30px; border-radius: 26px; background: linear-gradient(120deg, rgba(255,93,162,.19), rgba(167,139,250,.18), rgba(103,213,255,.14)); border: 1px solid rgba(255,255,255,.14); }
+    footer { border-top: 1px solid rgba(255,255,255,.1); padding: 25px 0 35px; color: var(--muted); font-size: .9rem; }
+    .small { color: var(--muted); font-size: .9rem; }
+    @media (max-width: 760px) {
+      .hero, .about { grid-template-columns: 1fr; }
+      .hero { padding-top: 50px; }
+      .portrait { min-height: 260px; aspect-ratio: auto; }
+      .grid { grid-template-columns: 1fr; }
+      nav { align-items: flex-start; flex-direction: column; }
+      .navlinks { gap: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home">PASTAH <span>DEMIH</span></a>
+      <div class="navlinks">
+        <a href="#about">About</a>
+        <a href="#creative-work">Creative Work</a>
+        <a href="#electrical">Electrical</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="wrap hero" id="home">
+      <div>
+        <div class="eyebrow">Ugandan creative • Music • Technology</div>
+        <h1>Pastah<br><span class="gradient">Demih.</span></h1>
+        <p class="lead">Songwriter, music composer and content creator — with a growing skill set in electrical work. Welcome to my creative world, where music, learning and practical skills come together.</p>
+        <div class="actions">
+          <a class="btn primary" href="#creative-work">Explore My Work</a>
+          <a class="btn" href="#contact">Connect With Me</a>
+        </div>
+      </div>
+      <div class="portrait" aria-label="Profile photo placeholder">
+        <div>
+          <div class="camera">📸</div>
+          <h3>Your photo goes here</h3>
+          <p>Replace this space with a clear profile photo when you're ready to publish.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap about">
+        <div class="section-head">
+          <div class="eyebrow">A little about me</div>
+          <h2>Creative heart.<br><span class="gradient">Curious mind.</span></h2>
+        </div>
+        <div>
+          <p>My name is <strong>Pastah Demih</strong>. I am a Ugandan and I am passionate about songwriting, music composition and creating digital content.</p>
+          <p>I have completed certificate-level studies in music and electrical work, and I am continuing to study and improve in both fields. I also sing in my church choir and help train the choir, using music to serve, learn and grow with others.</p>
+          <p>My goal is to keep developing my skills, share meaningful creative work, collaborate with others and build a future that brings together music and technical knowledge.</p>
+          <div class="tags">
+            <span class="tag">Songwriting</span><span class="tag">Music Composition</span>
+            <span class="tag">Content Creation</span><span class="tag">Choir Singing</span>
+            <span class="tag">Choir Training</span><span class="tag">Electrical Work</span>
+            <span class="tag">Lifelong Learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="creative-work">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">What I do</div>
+          <h2>My creative work</h2>
+          <p>Music is at the centre of my creative journey, and I enjoy exploring different ways to express ideas.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <div class="icon">✍️</div>
+            <h3>Songwriting</h3>
+            <p>Writing lyrics and developing song ideas, including gospel music and other styles.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🎼</div>
+            <h3>Music Composition</h3>
+            <p>Developing musical ideas and learning how to shape them into complete compositions.</p>
+          </article>
+          <article class="card">
+            <div class="icon">🎥</div>
+            <h3>Content Creation</h3>
+            <p>Creating and sharing content that reflects my interests, skills, faith and creative journey.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="electrical">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Practical skills</div>
+          <h2>Electrical work & continued learning</h2>
+        </div>
+        <div class="highlight">
+          <p>Alongside music, I have certificate-level training in electrical studies and I am continuing my education. I am interested in building my technical knowledge, gaining practical experience and growing into a capable electrical professional.</p>
+          <p class="small">For safety, electrical work should only be carried out within the limits of appropriate training, supervision and local requirements.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-box">
+          <div>
+            <div class="eyebrow">Let's connect</div>
+            <h2>Have a creative idea?</h2>
+            <p class="lead">I'm open to music collaborations, creative projects and professional connections.</p>
+            <p class="small">For professional enquiries, music collaborations and creative projects, email me at <a href="mailto:pastahdemih@gmail.com">pastahdemih@gmail.com</a>.</p>
+          </div>
+          <div class="actions">
+            <!-- Add your actual public profile URLs when ready -->
+            <a class="btn" href="mailto:pastahdemih@gmail.com">Email Me</a>
+            <span class="btn">YouTube — coming soon</span>
+            <span class="btn">TikTok — coming soon</span>
+            <span class="btn">Instagram — coming soon</span>
+            <span class="btn">Facebook — coming soon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Pastah Demih</strong> · Songwriter · Music Composer · Content Creator · Electrical Trainee
+      <p>© <span id="year"></span> Pastah Demih. All rights reserved.</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
